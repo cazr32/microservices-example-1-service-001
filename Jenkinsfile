@@ -21,9 +21,6 @@ pipeline{
             }          
         }
         stage('Publish Docker Image') {
-            when {
-                branch 'master'
-            }
             steps {
                 withDockerRegistry([ credentialsId: "dockerhub-credentials", url: "" ]) {
                     sh "docker push cazr32/microservices-example-1/service-001:${env.BUILD_ID}"
