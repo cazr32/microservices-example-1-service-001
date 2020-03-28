@@ -16,7 +16,8 @@ pipeline{
             steps{
                 sh "pwd"
                 sh "ls -a"
-                sh 'docker build -f "Dockerfile" -t cazr32/microservices-example-1/service-001:${env.BUILD_ID}'
+                sh 'docker build -t cazr32/microservices-example-1/service-001:${env.BUILD_ID}'
+                //sh 'docker build -f "Dockerfile" -t cazr32/microservices-example-1/service-001:${env.BUILD_ID}'
             }          
         }
         stage('Publish Docker Image') {
