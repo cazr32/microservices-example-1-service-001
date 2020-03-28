@@ -28,7 +28,7 @@ pipeline{
             }
             post {
                 success {
-                    sh "docker-compose up"
+                    sh "BUILD_ID=${env.BUILD_ID} docker-compose up"
                 }
             }
         }
