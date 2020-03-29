@@ -79,7 +79,7 @@
 					<execution>
 					<phase>process-resources</phase>                                                                  
 					<goals>
-						<goal>updateDB</goal>
+						<goal>update</goal>
 					</goals>
 					</execution>
 				</executions>
