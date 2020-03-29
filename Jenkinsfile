@@ -32,5 +32,10 @@ pipeline{
                 }
             }
         }
+        stage('Run database changes with liquibase'){
+            steps{
+                sh 'mvn -f pom.xml liquibase:updateDB'
+            }          
+        }
     }
 }

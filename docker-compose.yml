@@ -16,6 +16,7 @@ services:
         container_name: microservices-example-1-service-001
         # volumes:
         #     - ./usr/docker/SampleProject2/tomcat/demo.war:/usr/local/tomcat/webapps/demo.war
+        network: microservices-example-1-network
         ports:
             - "7070:8080"
         restart: always
