@@ -13,6 +13,7 @@ services:
     
     tomcat:
         image: cazr32/microservices-example-1-service-001:${BUILD_ID}
+        container_name: cazr32/microservices-example-1-service-001:${BUILD_ID}
         # volumes:
         #     - ./usr/docker/SampleProject2/tomcat/demo.war:/usr/local/tomcat/webapps/demo.war
         ports:
